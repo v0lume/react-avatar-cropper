@@ -1,0 +1,35 @@
+{
+  "name": "react-avatar-cropper",
+  "version": "0.0.1",
+  "repository": "https://github.com/DropsOfSerenity/react-avatar-cropper",
+  "description": "An avatar cropper meant to be a complete solution to avatar cropping.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack-dev-server --content-base example/ --hot"
+  },
+  "author": "Justin Schiff",
+  "license": "MIT",
+  "keywords": [
+    "react-component",
+    "reactjs",
+    "react"
+  ],
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^5.2.17",
+    "babel-core": "^5.2.17",
+    "babel-loader": "^5.0.0",
+    "browserify": "^10.1.3",
+    "node-libs-browser": "^0.5.0",
+    "react": "^0.13.3",
+    "react-hot-loader": "^1.2.7",
+    "reactify": "^1.1.1",
+    "webpack": "^1.9.4",
+    "webpack-dev-server": "^1.8.2"
+  }
+}
