@@ -2,8 +2,8 @@ function init() {
 
     // heeere we go !
 
-    var blue = new THREE.Color(0x305e94);
-    var pink = new THREE.Color(0x305e94);
+    var blue = new THREE.Color(0xFFFFFF);
+    var pink = new THREE.Color(0xFFFFFF);
 
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -47,15 +47,15 @@ function init() {
     // var material = new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0xa9a9a9, shininess: 30, shading: THREE.FlatShading }  );
 
     var shape = THREE.SceneUtils.createMultiMaterialObject(
-        // radius of entire torus, diameter of tube (less than total radius), 
+        // radius of entire torus, diameter of tube (less than total radius),
         // segments around radius, segments around torus ("sides")
         new THREE.TorusGeometry(25, 10, 8, 4),
         multiMaterial);
     shape.position.set(-21, 20, 0);
     scene.add(shape);
     shape.dynamic=true,
-    // var geometry = THREE.SceneUtils.createMultiMaterialObject( 
-    // 		new THREE.TetrahedronGeometry( 40, 1 ), 
+    // var geometry = THREE.SceneUtils.createMultiMaterialObject(
+    // 		new THREE.TetrahedronGeometry( 40, 1 ),
     // 		multiMaterial );
     // 	geometry.position.set(100, 50, 0);
     // var geometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 6, 2 );
@@ -76,10 +76,10 @@ function init() {
     // scene.add(shape[0],shape[1],shape[2]);
     scene.add(shape);
 
-    var light = new THREE.PointLight(0x305e94);
+    var light = new THREE.PointLight(0xFFFFFF);
     light.position.set(0, 200, 50);
     scene.add(light);
-    var light2 = new THREE.AmbientLight(0x305e94); // soft white light
+    var light2 = new THREE.AmbientLight(0xFFFFFF); // soft white light
     scene.add(light);
     camera.position.set(0, 0, 200); // x y z
     shape.position.y = 170;
@@ -104,7 +104,7 @@ function init() {
         	shape.rotation.y -= 0.0053;
         	shape.rotation.x -= 0.0053;
         }
-        
+
         // if(!state){
         // 	addEffect();
         // }
@@ -131,7 +131,7 @@ function init() {
     window.setTimeout(function() {
     	state= "state3";
         render();
-    }, 2000);	
+    }, 2000);
 
     //==================================================//
 }
