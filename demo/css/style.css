@@ -10,7 +10,7 @@
   top: 0;
 }
 .blink-me {
-  margin-left:40px;
+  margin-left:0px;
     -webkit-animation-name: blinker;
     -webkit-animation-duration: 1.2s;
     -webkit-animation-timing-function: ease-out;
@@ -158,6 +158,6 @@ p{
 }
 
 .profile {
-      top: -100px;
+      top: -60px;
   position: relative;
 }
