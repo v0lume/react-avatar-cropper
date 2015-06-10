@@ -14,7 +14,6 @@ var App = React.createClass({
     }
   },
   handleFileChange: function(dataURI) {
-    console.log("new file", dataURI);
     this.setState({
       img: dataURI,
       croppedImg: this.state.croppedImg,
@@ -28,17 +27,24 @@ var App = React.createClass({
       croppedImg: dataURI
     });
   },
+  handleRequestHide: function() {
+    this.setState({
+      cropperOpen: false
+    });
+  },
   render () {
     return (
       <div>
         <img src={this.state.croppedImg} />
         <FileUpload handleFileChange={this.handleFileChange} />
         {this.state.cropperOpen &&
-          <Modal title="Crop It" onRequestHide={function() {this.setState({cropperOpen: false})}.bind(this)}>
-            <div className="modal-body">
-              <AvatarCropper onCrop={this.handleCrop} image={this.state.img} width={400} height={400} />
-            </div>
-          </Modal>
+          <AvatarCropper
+            onRequestHide={this.handleRequestHide}
+            onCrop={this.handleCrop}
+            image={this.state.img}
+            width={400}
+            height={400}
+          />
         }
       </div>
     );
