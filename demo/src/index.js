@@ -10,28 +10,25 @@ var App = React.createClass({
     }
   },
   handleFileChange: function(dataURI) {
-    console.log("new file", dataURI);
     this.setState({
       img: dataURI,
-      croppedImg: this.state.croppedImg,
       cropperOpen: true
-    });
-  },
-  handleCrop: function(dataURI) {
-    this.setState({
-      cropperOpen: false,
-      img: null,
-      croppedImg: dataURI
-    });
+    })
   },
   render () {
+    var cropper;
+    if (this.state.cropperOpen) {
+      cropper = <AvatarCropper image={this.state.img} width={400} height={400} />
+    }
     return (
       <div>
-        <img src={this.state.croppedImg} />
+        <div className="pic">
+          <div className="img"><img src={this.state.croppedImg} /></div>
+          <i className="fa fa-plus"></i>
+          <i className="fa fa-check"></i>
+        </div>
         <FileUpload handleFileChange={this.handleFileChange} />
-        {this.state.cropperOpen &&
-          <AvatarCropper onCrop={this.handleCrop} image={this.state.img} width={400} height={400} />
-        }
+        {cropper}
       </div>
     );
   }
@@ -43,12 +40,11 @@ var FileUpload = React.createClass({
     var reader = new FileReader();
     var file = e.target.files[0];
 
-    if (!file) return;
-
     reader.onload = function(img) {
       this.props.handleFileChange(img.target.result);
     }.bind(this);
     reader.readAsDataURL(file);
+
   },
 
   render: function() {
@@ -58,5 +54,5 @@ var FileUpload = React.createClass({
   }
 })
 
-React.render(<App />, document.body);
+React.render(<App />, document.getElementById("avatarFunctionality"));
 // React.render(<App />, document.getElementById("cropper"));
