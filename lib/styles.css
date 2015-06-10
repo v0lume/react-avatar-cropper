@@ -3,13 +3,12 @@
 }
 
 .AvatarCropper-base input[type=range] {
-  margin-top: -25px;
+  display: inline-block;
 }
 
 .AvatarCropper-base input[type=range] {
   /*removes default webkit styles*/
   -webkit-appearance: none;
-
   /*fix for FF unable to apply focus style bug */
   border: 1px solid white;
 

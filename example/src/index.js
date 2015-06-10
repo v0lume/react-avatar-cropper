@@ -1,12 +1,16 @@
 import React from "react";
 import AvatarCropper from "../../lib";
+import {
+  Modal,
+  Button
+} from "react-bootstrap";
 
 var App = React.createClass({
   getInitialState: function() {
     return {
       cropperOpen: false,
       img: null,
-      croppedImg: "http://media2.giphy.com/media/fWrorpy7Jrlvi/200w_s.gif"
+      croppedImg: "http://placehold.it/400/400"
     }
   },
   handleFileChange: function(dataURI) {
@@ -30,7 +34,11 @@ var App = React.createClass({
         <img src={this.state.croppedImg} />
         <FileUpload handleFileChange={this.handleFileChange} />
         {this.state.cropperOpen &&
-          <AvatarCropper onCrop={this.handleCrop} image={this.state.img} width={400} height={400} />
+          <Modal title="Crop It" onRequestHide={function() {}}>
+            <div className="modal-body">
+              <AvatarCropper onCrop={this.handleCrop} image={this.state.img} width={400} height={400} />
+            </div>
+          </Modal>
         }
       </div>
     );
