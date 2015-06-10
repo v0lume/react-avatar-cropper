@@ -34,7 +34,7 @@ var App = React.createClass({
         <img src={this.state.croppedImg} />
         <FileUpload handleFileChange={this.handleFileChange} />
         {this.state.cropperOpen &&
-          <Modal title="Crop It" onRequestHide={function() {}}>
+          <Modal title="Crop It" onRequestHide={function() {this.setState({cropperOpen: false})}.bind(this)}>
             <div className="modal-body">
               <AvatarCropper onCrop={this.handleCrop} image={this.state.img} width={400} height={400} />
             </div>
@@ -54,6 +54,7 @@ var FileUpload = React.createClass({
     if (!file) return;
 
     reader.onload = function(img) {
+      React.findDOMNode(this.refs.in).value = '';
       this.props.handleFileChange(img.target.result);
     }.bind(this);
     reader.readAsDataURL(file);
@@ -61,7 +62,7 @@ var FileUpload = React.createClass({
 
   render: function() {
     return (
-      <input type="file" onChange={this.handleFile} />
+      <input ref="in" type="file" onChange={this.handleFile} />
     );
   }
 })
