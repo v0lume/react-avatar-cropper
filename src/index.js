@@ -71,7 +71,7 @@ var FileUpload = React.createClass({
       <input ref="in" type="file" onChange={this.handleFile} />
     );
   }
-})
+});
 
-React.render(<App />, document.body);
+React.render(<App />, document.getElementById("content"));
 // React.render(<App />, document.getElementById("cropper"));
