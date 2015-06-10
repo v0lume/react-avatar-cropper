@@ -14,7 +14,8 @@ module.exports = {
   },
 
   externals: {
-    react: "react"
+    react: "react",
+    "react-bootstrap": "react-bootstrap"
   },
 
   module: {
