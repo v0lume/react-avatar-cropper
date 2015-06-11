@@ -10,7 +10,7 @@ var App = React.createClass({
     return {
       cropperOpen: false,
       img: null,
-      croppedImg: "http://placehold.it/400/400"
+      croppedImg: "http://www.fillmurray.com/400/400"
     }
   },
   handleFileChange: function(dataURI) {
@@ -35,8 +35,14 @@ var App = React.createClass({
   render () {
     return (
       <div>
-        <img src={this.state.croppedImg} />
-        <FileUpload handleFileChange={this.handleFileChange} />
+        <div className="avatar-photo">
+          <FileUpload handleFileChange={this.handleFileChange} />
+          <div className="avatar-edit">
+            <span>Click to Pick Avatar</span>
+            <i className="fa fa-camera"></i>
+          </div>
+          <img src={this.state.croppedImg} />
+        </div>
         {this.state.cropperOpen &&
           <AvatarCropper
             onRequestHide={this.handleRequestHide}
