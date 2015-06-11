@@ -13,9 +13,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js" charset="utf-8"></script>
   <link href="./css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
-<!--[if lt IE 9]>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css" />
-<![endif]-->
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css" />
+  <![endif]-->
 </head>
 <body>
   <div class="github-fork-ribbon-wrapper right">
@@ -107,6 +107,41 @@
 }</code></pre>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="contributing">Contributing and Direction</h2>
+        <p>
+          Feel free to fork and pull request for anything you would like.
+          Contributions are greatly appreciated. There are a few main long term
+          goals I would like to put out there to solidify the overall direction
+          of the project.
+        </p>
+
+        <h4 class="text-muted">Long Term Goals</h4>
+        <ul>
+          <li>Removing <code>react-bootstrap</code> as a dependency.</li>
+          <li>Customizable Modal Template</li>
+          <li>Testing coverage would be nice, I would like to aim for 100% coverage of well written tests.</li>
+          <li>Cross Browser Compatibility</li>
+          <li>Mobile Support</li>
+        </ul>
+        <h4 class="text-muted">Things that are out of scope</h4>
+        <ul>
+          <li>
+            Highly Custom Situations are out of scope, I want to handle the
+            99% use case <strong>really</strong> well and not worry about the 1%,
+            those cases would be better served by a custom solution anyway.
+          </li>
+          <li>
+            For now other forms of interaction are out of scope. I would like to
+            keep the interaction as a modal that handles the cropping and returns
+            the cropped image. I feel like this is 99% use case both for large
+            scale web apps and rapidly prototyped sites.
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <footer class="footer">
@@ -118,7 +153,6 @@
     </div>
   </footer>
 
-  <script src="http://localhost:8080/webpack-dev-server.js"></script>
-  <script src="/assets/bundle.js"></script>
+  <script src="./bundle.js"></script>
 </body>
 </html>
