@@ -21,6 +21,10 @@ body {
   margin-bottom: 0;
 }
 
+p {
+  font-size: 16px;
+}
+
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
