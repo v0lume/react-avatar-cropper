@@ -28,7 +28,7 @@
     <div class="container">
       <h1>React Avatar Cropper</h1>
       <p>The end all solution for avatar cropping functionality in React.js</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" href="#demo" role="button">Learn more &raquo;</a></p>
       <iframe src="https://ghbtns.com/github-btn.html?user=DropsOfSerenity&repo=react-avatar-cropper&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
     </div>
   </div>
@@ -36,7 +36,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Demo</h2>
+        <h2 id="demo">Demo</h2>
         <p>
           React Avatar Cropper aims to be an out of the box solution to solve
           the avatar cropping problem for 99% of common use cases. Most of the
@@ -53,9 +53,34 @@
       </div>
     </div>
 
+
     <div class="row">
-      <div class="col md-12">
-        <h2>Usage</h2>
+      <div class="col-md-12">
+        <h2 id="installation">Installation</h2>
+        <p>In your project</p>
+        <pre>npm install --save react-avatar-cropper</pre>
+        <p>react-avatar-cropper also <strong>depends</strong> on
+          <code>react</code> obviously :)
+          and <code>react-bootstrap</code> for modal functionality. To install
+          run the following.
+        </p>
+        <pre>npm install --save react</pre>
+        <pre>npm install --save react-bootstrap</pre>
+
+        <p>Now that you have it installed, make sure you have the bootstrap
+          javascript and css loaded, and require it into into your javascript to
+          start building components with it :)</p>
+
+          <strong>For ES6</strong>
+          <pre><code class="language-javascript">import AvatarCropper from "react-avatar-cropper";</code></pre>
+          <strong>For ES5</strong>
+          <pre><code class="language-javascript">var AvatarCropper = require("react-avatar-cropper");</code></pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="usage">Usage</h2>
         <p>Usage is fairly simple, you can check the <code>/example</code>
         folder on github for a slightly more complex use case
         (the use case you see above in the demo). AvatarCropper simple takes
