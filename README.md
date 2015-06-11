@@ -1,16 +1,17 @@
 # react-avatar-cropper
 
-React Avatar Cropper is aiming to be the end all be all complete
-solution for facebook style avatar cropping. It is this components
-responsibility to be able to crop an image to a square ratio and provide
-the cropped data back to the calling component.
+React Avatar Cropper aims to be an out of the box solution to solve the avatar cropping problem for 99% of common use cases. Most of the time you want a modal to pop up, allow the user to crop their uploaded image, and then you want to receive that base64 data to display and send to the server. React Avatar Cropper takes care of this use case.
+
+Taking heavy inspiration from slack's and facebook's user photo cropper, react-avatar-cropper is here to make it easy.
+
+
+## Demo
+
+There is a demo on http://dropsofserenity.github.io/react-avatar-cropper/
 
 ## Usage
 
-Usage of `react-avatar-cropper` is simple, just require the component
-and use it where you are in need of the cropper. The most common use
-case will likely be in a modal after uploading an image to use as an
-avatar.
+Usage is fairly simple, you can check the /example folder on github for a slightly more complex use case (the use case you see above in the demo). AvatarCropper simple takes a width and a height to determine what size avatar you would like. AvatarCropper then takes an image property where you can pass an external image, a user uploaded data URI or whatever you would like. An onRequestHide function is passed to the underlying modal so you can decide how to dismiss the modal. Lastly onCrop callback function is required, and gives you back the cropped Image, for you to do with as you wish.
 
 ```js
 // require the component...
@@ -20,20 +21,23 @@ var AvatarCropper = require("react-avatar-cropper");
 render: function() {
   return (
     <AvatarCropper
-      image="http://placekitten.com/1920/900"
+      onRequestHide={this.handleRequestHide}
+      onCrop={this.handleCrop}
+      image={this.state.img}
       width={400}
       height={400}
-      onComplete={this.finishCropping}
     />
   );
-});
+}
 ```
 
 ## Example
 
 There is an example of this common use case on the page for this plugin.
 Most importantly we pass the cropped DataURI back through your provided
-onComplete function.
+onCrop function.
+
+Check out http://dropsofserenity.github.io/react-avatar-cropper/ for more examples and info.
 
 ## Contributing
 
