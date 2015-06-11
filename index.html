@@ -39,11 +39,13 @@
         <h2 id="demo">Demo</h2>
         <p>
           React Avatar Cropper aims to be an out of the box solution to solve
-          the avatar cropping problem for 99% of common use cases. Most of the
+          the avatar cropping problem for <strong>99%</strong> of common use cases. Most of the
           time you want a modal to pop up, allow the user to crop their uploaded
-          image, and then you want to receive that base64 data to display and
+          image, and then you want to receive that <strong>base64 data</strong> to display and
           send to the server. React Avatar Cropper takes care of this use case.
         </p>
+        <p>Taking heavy inspiration from slack's and facebook's user photo cropper,
+          react-avatar-cropper is here to make it easy.</p>
         <p>
           <strong>Try it out</strong>
         </p>
@@ -92,7 +94,7 @@
         Lastly <code>onCrop</code> callback function is required, and gives you
         back the cropped Image, for you to do with as you wish.</p>
 
-      <pre><code class="language-javascript">render () {
+      <pre><code class="language-javascript">render: function() {
   return (
     &lt;AvatarCropper
       onRequestHide={this.handleRequestHide}
