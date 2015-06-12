@@ -74,7 +74,7 @@ var FileUpload = React.createClass({
 
   render: function() {
     return (
-      <input ref="in" type="file" onChange={this.handleFile} />
+      <input ref="in" type="file" accept="image/*" onChange={this.handleFile} />
     );
   }
 });
