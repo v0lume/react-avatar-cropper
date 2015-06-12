@@ -25,18 +25,24 @@
   </div>
 
   <div class="jumbotron">
-    <div class="container">
+    <div class="container-fluid text-center">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
       <h1>React Avatar Cropper</h1>
       <p>The end all solution for avatar cropping functionality in React.js</p>
       <p><a class="btn btn-primary btn-lg" href="#demo" role="button">Learn more &raquo;</a></p>
-      <iframe src="https://ghbtns.com/github-btn.html?user=DropsOfSerenity&repo=react-avatar-cropper&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+      <iframe style="left: 26px;position: relative;" src="https://ghbtns.com/github-btn.html?user=DropsOfSerenity&repo=react-avatar-cropper&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
     </div>
   </div>
-
+  <div class="container-fluid no-pad">
+    <div class="col-md-12 no-pad">
+      <h2 id="demo">Demo</h2>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h2 id="demo">Demo</h2>
+      <div class="col-md-8 col-md-offset-2 m-top">
         <p>
           React Avatar Cropper aims to be an out of the box solution to solve
           the avatar cropping problem for <strong>99%</strong> of common use cases. Most of the
@@ -54,11 +60,15 @@
         </div>
       </div>
     </div>
-
-
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+</div>
+    <div class="container-fluid no-pad">
+      <div class="col-md-12 no-pad m-top">
         <h2 id="installation">Installation</h2>
+      </div>
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 m-top">
         <p>In your project</p>
         <pre>npm install --save react-avatar-cropper</pre>
         <p>react-avatar-cropper also <strong>depends</strong> on
@@ -79,10 +89,15 @@
           <pre><code class="language-javascript">var AvatarCropper = require("react-avatar-cropper");</code></pre>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+    </div>
+    <div class="container-fluid no-pad">
+      <div class="col-md-12 no-pad m-top">
         <h2 id="usage">Usage</h2>
+      </div>
+    </div>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 m-top">
         <p>Usage is fairly simple, you can check the <code>/example</code>
         folder on github for a slightly more complex use case
         (the use case you see above in the demo). AvatarCropper simple takes
@@ -107,10 +122,15 @@
 }</code></pre>
       </div>
     </div>
-
+    </div>
+    <div class="container-fluid no-pad">
+      <div class="col-md-12 no-pad m-top">
+        <h2 id="contributing">Contributing and<br> Direction</h2>
+      </div>
+    </div>
+    <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h2 id="contributing">Contributing and Direction</h2>
+      <div class="col-md-8 col-md-offset-2 m-top">
         <p>
           Feel free to fork and pull request for anything you would like.
           Contributions are greatly appreciated. There are a few main long term
@@ -144,15 +164,7 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="col md-4">
-        <p class="text-muted">
-        </p>
-      </div>
-    </div>
-  </footer>
-
+  <script type="text/javascript" src="smoothScroll.min.js"></script>
   <script src="./bundle.js"></script>
 </body>
 </html>
