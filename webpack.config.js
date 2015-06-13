@@ -6,9 +6,8 @@ module.exports = {
   },
 
   output: {
-    path: './build',
+    path: './example',
     filename: 'bundle.js',
-    publicPath: '/assets/'
   },
 
   module: {
@@ -21,7 +20,6 @@ module.exports = {
   devServer: {
     contentBase: './example',
     host: 'localhost',
-    inline: true,
     info: false
   }
 };
