@@ -20818,22 +20818,30 @@
 	    value: function render() {
 	      return _react2["default"].createElement(
 	        "div",
-	        null,
-	        _react2["default"].createElement("canvas", {
-	          ref: "canvas",
-	          width: this.props.width,
-	          height: this.props.height }),
-	        _react2["default"].createElement("input", {
-	          type: "range",
-	          name: "zoom",
-	          ref: "zoom",
-	          onChange: this.handleZoomUpdate.bind(this),
-	          style: { width: this.props.width },
-	          min: "1",
-	          max: "3",
-	          step: "0.01",
-	          defaultValue: "1"
-	        }),
+	        { className: "AvatarCropper-canvas" },
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "row" },
+	          _react2["default"].createElement("canvas", {
+	            ref: "canvas",
+	            width: this.props.width,
+	            height: this.props.height })
+	        ),
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "row" },
+	          _react2["default"].createElement("input", {
+	            type: "range",
+	            name: "zoom",
+	            ref: "zoom",
+	            onChange: this.handleZoomUpdate.bind(this),
+	            style: { width: this.props.width },
+	            min: "1",
+	            max: "3",
+	            step: "0.01",
+	            defaultValue: "1"
+	          })
+	        ),
 	        _react2["default"].createElement(
 	          "div",
 	          { className: "modal-footer" },
@@ -20855,7 +20863,6 @@
 	  return Cropper;
 	})(_react2["default"].Component);
 
-	;
 	Cropper.propTypes = {
 	  image: _react2["default"].PropTypes.string.isRequired,
 	  width: numberableType,
@@ -20954,7 +20961,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(161)();
-	exports.push([module.id, ".AvatarCropper-base {\n  text-align: center;\n}\n\n.AvatarCropper-base input[type=range] {\n  display: inline-block;\n}\n\n.AvatarCropper-base input[type=range] {\n  /*removes default webkit styles*/\n  -webkit-appearance: none;\n  /*fix for FF unable to apply focus style bug */\n  padding: 20px 0;\n  border: 1px solid white;\n\n  /*required for proper track sizing in FF*/\n  width: 400px;\n}\n.AvatarCropper-base input[type=range]::-webkit-slider-runnable-track {\n  width: 400px;\n  height: 5px;\n  background: #ddd;\n  border: none;\n  border-radius: 3px;\n}\n.AvatarCropper-base input[type=range]::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #454545;\n  margin-top: -4px;\n}\n.AvatarCropper-base input[type=range]:focus {\n  outline: none;\n}\n.AvatarCropper-base input[type=range]:focus::-webkit-slider-runnable-track {\n  background: #ccc;\n}\n\n.AvatarCropper-base input[type=range]::-moz-range-track {\n  width: 400px;\n  height: 5px;\n  background: #ddd;\n  border: none;\n  border-radius: 3px;\n}\n.AvatarCropper-base input[type=range]::-moz-range-thumb {\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #454545;\n}\n\n/*hide the outline behind the border*/\n.AvatarCropper-base input[type=range]:-moz-focusring{\n  outline: 1px solid white;\n  outline-offset: -1px;\n}\n\n.AvatarCropper-base input[type=range]::-ms-track {\n  width: 400px;\n  height: 5px;\n\n  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */\n  background: transparent;\n\n  /*leave room for the larger thumb to overflow with a transparent border */\n  border-color: transparent;\n  border-width: 6px 0;\n\n  /*remove default tick marks*/\n  color: transparent;\n}\n.AvatarCropper-base input[type=range]::-ms-fill-lower {\n  background: #777;\n  border-radius: 10px;\n}\n.AvatarCropper-base input[type=range]::-ms-fill-upper {\n  background: #ddd;\n  border-radius: 10px;\n}\n.AvatarCropper-base input[type=range]::-ms-thumb {\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #454545;\n}\n.AvatarCropper-base input[type=range]:focus::-ms-fill-lower {\n  background: #888;\n}\n.AvatarCropper-base input[type=range]:focus::-ms-fill-upper {\n  background: #ccc;\n}\n", ""]);
+	exports.push([module.id, ".AvatarCropper-base {\n  text-align: center;\n}\n\n.AvatarCropper-base input[type=range] {\n  display: inline-block;\n}\n\n.AvatarCropper-base input[type=range] {\n  /*removes default webkit styles*/\n  -webkit-appearance: none;\n  /*fix for FF unable to apply focus style bug */\n  padding: 20px 0;\n  border: 1px solid white;\n\n  /*required for proper track sizing in FF*/\n  width: 400px;\n}\n.AvatarCropper-base input[type=range]::-webkit-slider-runnable-track {\n  width: 400px;\n  height: 5px;\n  background: #ddd;\n  border: none;\n  border-radius: 3px;\n}\n.AvatarCropper-base input[type=range]::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #454545;\n  margin-top: -4px;\n}\n.AvatarCropper-base input[type=range]:focus {\n  outline: none;\n}\n.AvatarCropper-base input[type=range]:focus::-webkit-slider-runnable-track {\n  background: #ccc;\n}\n\n.AvatarCropper-base input[type=range]::-moz-range-track {\n  width: 400px;\n  height: 5px;\n  background: #ddd;\n  border: none;\n  border-radius: 3px;\n}\n.AvatarCropper-base input[type=range]::-moz-range-thumb {\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #454545;\n}\n\n/*hide the outline behind the border*/\n.AvatarCropper-base input[type=range]:-moz-focusring{\n  outline: 1px solid white;\n  outline-offset: -1px;\n}\n\n.AvatarCropper-base input[type=range]::-ms-track {\n  width: 400px;\n  height: 5px;\n\n  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */\n  background: transparent;\n\n  /*leave room for the larger thumb to overflow with a transparent border */\n  border-color: transparent;\n  border-width: 6px 0;\n\n  /*remove default tick marks*/\n  color: transparent;\n}\n.AvatarCropper-base input[type=range]::-ms-fill-lower {\n  background: #777;\n  border-radius: 10px;\n}\n.AvatarCropper-base input[type=range]::-ms-fill-upper {\n  background: #ddd;\n  border-radius: 10px;\n}\n.AvatarCropper-base input[type=range]::-ms-thumb {\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #454545;\n}\n.AvatarCropper-base input[type=range]:focus::-ms-fill-lower {\n  background: #888;\n}\n.AvatarCropper-base input[type=range]:focus::-ms-fill-upper {\n  background: #ccc;\n}\n.AvatarCropper-base canvas {\n  cursor: move;\n}\n", ""]);
 
 /***/ },
 /* 161 */

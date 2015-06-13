@@ -95,3 +95,6 @@
 .AvatarCropper-base input[type=range]:focus::-ms-fill-upper {
   background: #ccc;
 }
+.AvatarCropper-base canvas {
+  cursor: move;
+}

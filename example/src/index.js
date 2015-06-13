@@ -11,7 +11,7 @@ var App = React.createClass({
       cropperOpen: false,
       img: null,
       croppedImg: "http://www.fillmurray.com/400/400"
-    }
+    };
   },
   handleFileChange: function(dataURI) {
     this.setState({
