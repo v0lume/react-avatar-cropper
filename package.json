@@ -21,7 +21,7 @@
     "react"
   ],
   "dependencies": {
-    "react-bootstrap": "^0.23.2"
+    "react-bootstrap": "0.23.2"
   },
   "devDependencies": {
     "babel": "^5.2.17",
