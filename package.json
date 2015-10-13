@@ -1,6 +1,6 @@
 {
   "name": "react-avatar-cropper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "https://github.com/DropsOfSerenity/react-avatar-cropper",
   "description": "An avatar cropper meant to be a complete solution to avatar cropping.",
   "main": "dist/ReactAvatarCropper.min.js",
