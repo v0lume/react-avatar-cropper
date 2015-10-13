@@ -1,9 +1,6 @@
 import React from "react";
+import ReactDom from "react-dom";
 import AvatarCropper from "../../lib";
-import {
-  Modal,
-  Button
-} from "react-bootstrap";
 
 var App = React.createClass({
   getInitialState: function() {
@@ -46,6 +43,7 @@ var App = React.createClass({
         {this.state.cropperOpen &&
           <AvatarCropper
             onRequestHide={this.handleRequestHide}
+            cropperOpen={this.state.cropperOpen}
             onCrop={this.handleCrop}
             image={this.state.img}
             width={400}
@@ -66,7 +64,7 @@ var FileUpload = React.createClass({
     if (!file) return;
 
     reader.onload = function(img) {
-      React.findDOMNode(this.refs.in).value = '';
+      ReactDom.findDOMNode(this.refs.in).value = '';
       this.props.handleFileChange(img.target.result);
     }.bind(this);
     reader.readAsDataURL(file);
@@ -79,5 +77,4 @@ var FileUpload = React.createClass({
   }
 });
 
-React.render(<App />, document.getElementById("content"));
-// React.render(<App />, document.getElementById("cropper"));
+ReactDom.render(<App />, document.getElementById("content"));
